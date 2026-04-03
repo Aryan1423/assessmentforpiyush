@@ -1,0 +1,254 @@
+.previewRail {
+  position: sticky;
+  top: 24px;
+}
+
+.previewCard {
+  padding: 28px;
+  border: 1px solid rgba(20, 22, 30, 0.08);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top, rgba(251, 205, 117, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(22, 28, 39, 0.98), rgba(15, 20, 29, 0.98));
+  color: #f6f1e9;
+  box-shadow:
+    0 30px 60px rgba(16, 18, 23, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: riseIn 760ms cubic-bezier(0.21, 1, 0.32, 1);
+}
+
+.previewHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245, 205, 135, 0.78);
+}
+
+.title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.deliveryBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.orderMeta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.metaLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(245, 241, 233, 0.58);
+}
+
+.metaValue {
+  font-size: 1rem;
+}
+
+.routeGrid {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.routeCard {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.routeLabel {
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 205, 135, 0.8);
+}
+
+.routeCopy {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: rgba(246, 241, 233, 0.92);
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.metricCard {
+  padding: 14px;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.metricLabel {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(246, 241, 233, 0.62);
+}
+
+.metricValue {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.22rem;
+  letter-spacing: -0.03em;
+}
+
+.statusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.statusBadgeActive {
+  background: rgba(230, 165, 55, 0.2);
+  color: #ffd891;
+  box-shadow: inset 0 0 0 1px rgba(230, 165, 55, 0.26);
+}
+
+.statusBadgeMuted {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(246, 241, 233, 0.66);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.packageSection {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.packageHeader {
+  margin-bottom: 14px;
+}
+
+.packageTitle {
+  font-size: 1.06rem;
+  font-weight: 800;
+}
+
+.packageSubtitle {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(246, 241, 233, 0.66);
+}
+
+.packageList {
+  display: grid;
+  gap: 12px;
+}
+
+.packageCard {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.packageRow {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.packageName {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.packageMeta {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(246, 241, 233, 0.68);
+}
+
+.packageValue {
+  font-size: 0.95rem;
+  color: #ffd896;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1080px) {
+  .previewRail {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .previewCard {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .previewHeader,
+  .packageRow {
+    flex-direction: column;
+  }
+
+  .orderMeta,
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+}

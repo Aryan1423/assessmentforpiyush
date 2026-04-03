@@ -1,0 +1,116 @@
+.sectionCard {
+  padding: 22px;
+  border: 1px solid rgba(30, 32, 41, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.sectionHeader {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #90714b;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #171922;
+}
+
+.optionStack {
+  display: grid;
+  gap: 12px;
+}
+
+.optionRow {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(29, 31, 39, 0.1);
+  border-radius: 18px;
+  background: rgba(250, 245, 236, 0.72);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.optionRow:hover {
+  transform: translateY(-1px);
+  border-color: rgba(199, 139, 36, 0.28);
+}
+
+.checkbox {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkboxVisual {
+  position: relative;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border: 1px solid rgba(35, 40, 53, 0.18);
+  border-radius: 8px;
+  background: #fffdf9;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.checkbox:checked + .checkboxVisual {
+  border-color: #c98b22;
+  background:
+    radial-gradient(circle at center, rgba(250, 214, 144, 0.55), rgba(201, 139, 34, 0.92)),
+    #c98b22;
+}
+
+.checkbox:checked + .checkboxVisual::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 5px;
+  background: #fff9ef;
+}
+
+.checkbox:focus-visible + .checkboxVisual {
+  outline: 3px solid rgba(199, 139, 36, 0.28);
+  outline-offset: 3px;
+}
+
+.optionCopy {
+  display: grid;
+  gap: 4px;
+}
+
+.optionTitle {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #171922;
+}
+
+.optionDescription {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(23, 25, 34, 0.68);
+}
+
+@media (max-width: 720px) {
+  .sectionCard {
+    padding: 18px;
+  }
+}

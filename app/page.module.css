@@ -1,0 +1,65 @@
+.page {
+  min-height: 100vh;
+  padding: 32px 18px 48px;
+}
+
+.shell {
+  width: min(1360px, 100%);
+  margin: 0 auto;
+}
+
+.shell :where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+.shell :where(input, button, textarea, select) {
+  font: inherit;
+}
+
+.shell :where(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(28, 29, 35, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.48);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b5330;
+}
+
+.title {
+  max-width: 11ch;
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  color: #191a21;
+}
+
+.intro {
+  max-width: 720px;
+  margin-top: 18px;
+  margin-bottom: 28px;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(25, 26, 33, 0.74);
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 18px 14px 36px;
+  }
+
+  .intro {
+    margin-bottom: 22px;
+  }
+}

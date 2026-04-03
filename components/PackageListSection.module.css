@@ -1,0 +1,80 @@
+.sectionCard {
+  padding: 22px;
+  border: 1px solid rgba(30, 32, 41, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.headerRow {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #90714b;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #171922;
+}
+
+.copy {
+  margin-top: 12px;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: rgba(23, 25, 34, 0.68);
+}
+
+.addButton {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #1f2430, #37455e);
+  color: #f8efe2;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 16px 30px rgba(31, 36, 48, 0.16);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.addButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(31, 36, 48, 0.2);
+}
+
+.addButton:focus-visible {
+  outline: 3px solid rgba(199, 139, 36, 0.28);
+  outline-offset: 3px;
+}
+
+.packageStack {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+@media (max-width: 720px) {
+  .sectionCard {
+    padding: 18px;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+}

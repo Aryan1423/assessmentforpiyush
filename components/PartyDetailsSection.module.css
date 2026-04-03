@@ -1,0 +1,84 @@
+.sectionCard {
+  padding: 22px;
+  border: 1px solid rgba(30, 32, 41, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.sectionHeader {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #90714b;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #171922;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.fieldWide {
+  grid-column: span 2;
+}
+
+.label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #3d4252;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(26, 28, 37, 0.12);
+  border-radius: 16px;
+  background: rgba(249, 244, 235, 0.72);
+  color: #161821;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.input::placeholder {
+  color: rgba(62, 66, 82, 0.42);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: #c78b24;
+  box-shadow: 0 0 0 4px rgba(199, 139, 36, 0.15);
+  background: #fffdf8;
+}
+
+@media (max-width: 720px) {
+  .sectionCard {
+    padding: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldWide {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,132 @@
+.card {
+  padding: 18px;
+  border: 1px solid rgba(37, 40, 50, 0.08);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(247, 240, 229, 0.84));
+  box-shadow: 0 12px 24px rgba(40, 25, 9, 0.05);
+  animation: packageIn 420ms cubic-bezier(0.21, 1, 0.32, 1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cardEyebrow {
+  margin-bottom: 5px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #967347;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #171922;
+}
+
+.removeButton {
+  border: 1px solid rgba(31, 34, 45, 0.12);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #313949;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.removeButton:hover:enabled {
+  transform: translateY(-1px);
+  border-color: rgba(199, 139, 36, 0.35);
+  color: #7c5317;
+}
+
+.removeButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.fieldWide {
+  grid-column: span 2;
+}
+
+.label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #3d4252;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(26, 28, 37, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #161821;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.input::placeholder {
+  color: rgba(62, 66, 82, 0.42);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: #c78b24;
+  box-shadow: 0 0 0 4px rgba(199, 139, 36, 0.15);
+  background: #fffdf8;
+}
+
+@keyframes packageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 16px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldWide {
+    grid-column: span 1;
+  }
+}

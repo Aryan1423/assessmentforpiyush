@@ -1,0 +1,84 @@
+.appShell {
+  position: relative;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.formPanel {
+  padding: 28px;
+  border: 1px solid rgba(31, 30, 34, 0.08);
+  border-radius: 30px;
+  background: rgba(255, 250, 243, 0.88);
+  box-shadow:
+    0 24px 54px rgba(36, 26, 11, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  animation: riseIn 700ms cubic-bezier(0.21, 1, 0.32, 1);
+}
+
+.panelHeader {
+  margin-bottom: 22px;
+}
+
+.kicker {
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #8b6334;
+}
+
+.panelTitle {
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #171922;
+}
+
+.panelCopy {
+  max-width: 60ch;
+  margin-top: 12px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(23, 25, 34, 0.72);
+}
+
+.formSections {
+  display: grid;
+  gap: 18px;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1080px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .formPanel {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .formSections {
+    gap: 14px;
+  }
+}
